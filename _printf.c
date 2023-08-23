@@ -40,6 +40,21 @@ int _printf(const char *format, ...)
 				write(1, &current, 1);
 				numofchar++;
 			}
+
+			else if (format[i] == 'd' || 'i')
+			{
+				int digits = va_arg(strlist, int);
+				int digitlength = 0;
+				char *convdigit = inttostr(digits);
+
+
+				while (convdigit[digitlength] != '\0')
+					digitlength ++;
+
+				write(1, convdigit, digitlength);
+				numofchar += digitlength;
+			}
+
 			else if (format[i] == 's')
 			{
 				char *word = va_arg(strlist, char*);
