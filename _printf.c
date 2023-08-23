@@ -47,9 +47,8 @@ int _printf(const char *format, ...)
 				int digitlength = 0;
 				char *convdigit = inttostr(digits);
 
-
 				while (convdigit[digitlength] != '\0')
-					digitlength ++;
+					digitlength++;
 
 				write(1, convdigit, digitlength);
 				numofchar += digitlength;
