@@ -7,5 +7,7 @@
 
 int _printf(const char *format, ...);
 int _strlen(char *cur_str);
+int _numlen(int num);
+char *inttostr(int num);
 
 #endif
